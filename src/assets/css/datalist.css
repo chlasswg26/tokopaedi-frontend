@@ -1,0 +1,29 @@
+datalist {
+    position: absolute;
+    width: 35vw!important;
+    height: 53vh;
+    margin-top: 2.85rem;
+    border: 0 none;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+datalist option {
+    font-size: 0.9em;
+    padding: 0.3em 1em;
+    color:mediumseagreen;
+    background-color: white;
+    border: 1px dashed mediumseagreen;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+datalist option:hover,
+datalist option:focus {
+    color: white;
+    background-color: mediumseagreen;
+    border: 1px dashed white;
+    outline: 0 none;
+}

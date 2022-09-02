@@ -1,0 +1,17 @@
+::-webkit-scrollbar {
+    width: 0.70vw;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 1rem 1rem var(--bs-gray-200);
+    border-radius: 0.1vw;
+}
+
+::-webkit-scrollbar-thumb {
+    background: mediumseagreen;
+    border-radius: 0.5vw;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: mediumseagreen;
+}

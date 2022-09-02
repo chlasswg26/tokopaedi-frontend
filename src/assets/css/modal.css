@@ -1,0 +1,29 @@
+.modal-header {
+    border-bottom: none;
+}
+
+.modal-title {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 28px;
+}
+
+.btn-close:hover {
+    background-color: transparent;
+    border: 1px solid mediumseagreen;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    --bs-btn-focus-shadow-rgb: none;
+}
+
+.btn-close:focus {
+    background-color: transparent;
+    border: 1px solid mediumseagreen;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    --bs-btn-focus-shadow-rgb: none;
+}
+
+.btn-close:active {
+    transform: scale(0.8);
+}
