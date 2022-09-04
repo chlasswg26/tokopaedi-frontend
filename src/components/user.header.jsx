@@ -7,9 +7,9 @@ import filterIcon from '../assets/img/filter.svg'
 import cartIcon from '../assets/img/cart.svg'
 import bellIcon from '../assets/img/bell.svg'
 import mailIcon from '../assets/img/mail.svg'
-import FilterModal from './modal'
 import '../../node_modules/datalist-css/dist/datalist-css'
 import '../assets/css/datalist.css'
+import '../assets/css/filter.css'
 
 const UserHeader = () => {
   const [isFocus, setIsFocus] = useState(true)
@@ -42,56 +42,52 @@ const UserHeader = () => {
                                         onBlur={() => onBlurDatalist()}
                                         onClick={(event) => console.log('option clicked', event)}
                                         onChange={() => setIsFocus(true)} />
-                                    <datalist id="listOfResult">
-                                        {isFocus && (
-                                            <Fragment>
-                                                <option key={0} value="San Francisco">
-                                                    San Francisco
-                                                </option>
-                                                <option key={1} value="New York">
-                                                    New York
-                                                </option>
-                                                <option key={2} value="Seattle">
-                                                    Seattle
-                                                </option>
-                                                <option key={3} value="Los Angeles">
-                                                    Los Angeles
-                                                </option>
-                                                <option key={4} value="Chicago">
-                                                    Chicago
-                                                </option>
-                                                <option key={5} value="San Francisco">
-                                                    San Francisco
-                                                </option>
-                                                <option key={6} value="New York">
-                                                    New York
-                                                </option>
-                                                <option key={7} value="Seattle">
-                                                    Seattle
-                                                </option>
-                                                <option key={8} value="Los Angeles">
-                                                    Los Angeles
-                                                </option>
-                                                <option key={9} value="Chicago">
-                                                    Chicago
-                                                </option>
-                                                <option key={10} value="San Francisco">
-                                                    San Francisco
-                                                </option>
-                                                <option key={11} value="New York">
-                                                    New York
-                                                </option>
-                                                <option key={12} value="Seattle">
-                                                    Seattle
-                                                </option>
-                                                <option key={13} value="Los Angeles">
-                                                    Los Angeles
-                                                </option>
-                                                <option key={14} value="Chicago">
-                                                    Chicago
-                                                </option>
-                                            </Fragment>
-                                        )}
+                                    <datalist id="listOfResult" style={{ height: isFocus ? '53vh' : '0vh', width: isFocus ? '35vw!important' : '0vw' }}>
+                                        <option key={0} value="San Francisco">
+                                            San Francisco
+                                        </option>
+                                        <option key={1} value="New York">
+                                            New York
+                                        </option>
+                                        <option key={2} value="Seattle">
+                                            Seattle
+                                        </option>
+                                        <option key={3} value="Los Angeles">
+                                            Los Angeles
+                                        </option>
+                                        <option key={4} value="Chicago">
+                                            Chicago
+                                        </option>
+                                        <option key={5} value="San Francisco">
+                                            San Francisco
+                                        </option>
+                                        <option key={6} value="New York">
+                                            New York
+                                        </option>
+                                        <option key={7} value="Seattle">
+                                            Seattle
+                                        </option>
+                                        <option key={8} value="Los Angeles">
+                                            Los Angeles
+                                        </option>
+                                        <option key={9} value="Chicago">
+                                            Chicago
+                                        </option>
+                                        <option key={10} value="San Francisco">
+                                            San Francisco
+                                        </option>
+                                        <option key={11} value="New York">
+                                            New York
+                                        </option>
+                                        <option key={12} value="Seattle">
+                                            Seattle
+                                        </option>
+                                        <option key={13} value="Los Angeles">
+                                            Los Angeles
+                                        </option>
+                                        <option key={14} value="Chicago">
+                                            Chicago
+                                        </option>
                                     </datalist>
                                     <button type="button" className="btn btn-search">
                                         <img src={searchIcon} alt="Search" loading="lazy" />
@@ -233,9 +229,6 @@ const UserHeader = () => {
                   </div>
               </div>
             </header>
-            <FilterModal modalId="filterModal" modalTitle="Filter">
-                <p>test</p>
-            </FilterModal>
         </Fragment>
   )
 }

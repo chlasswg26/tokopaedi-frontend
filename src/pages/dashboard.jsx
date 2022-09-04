@@ -1,53 +1,93 @@
 import React, { Fragment } from 'react'
-import GuestHeader from '../components/guest.header'
-// import UserHeader from '../components/user.header'
+// import GuestHeader from '../components/guest.header'
+import UserHeader from '../components/user.header'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import {
+  Navigation,
+  Pagination,
+  Keyboard,
+  Mousewheel,
+  HashNavigation,
+  Lazy,
+  Autoplay
+} from 'swiper'
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/navigation'
+import 'swiper/css/hash-navigation'
+import 'swiper/css/keyboard'
+import 'swiper/css/mousewheel'
+import 'swiper/css/history'
+import 'swiper/css/lazy'
+import '../assets/css/carousel.css'
+import FilterHeader from '../components/filter.header'
 
 const Dashboard = () => {
+  const pagination = {
+    clickable: true,
+    renderBullet: function (index, className) {
+      return '<span class="' + className + '">' + (index + 1) + '</span>'
+    }
+  }
+
   return (
         <Fragment>
-            {/* <UserHeader /> */}
-            <GuestHeader />
+            <UserHeader />
+            {/* <GuestHeader /> */}
             <div className="container">
-              <div className="row">
+              <div className="row mb-5">
                 <div className="col">
-                  <div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="false" data-bs-touch="false">
-                    <div className="carousel-indicators">
-                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    </div>
-                    <div className="carousel-inner">
-                      <div className="carousel-item active">
-                        <img src="https://images.squarespace-cdn.com/content/v1/5810fd3520099ebb7c304192/1525148043894-332VS8NKW95SBRMO000L/black-banner-noise.png?format=2500w" className="d-block w-100" alt="..." />
-                          <div className="carousel-caption d-none d-md-block">
-                            <h5>First slide label</h5>
-                            <p>Some representative placeholder content for the first slide.</p>
-                          </div>
-                      </div>
-                      <div className="carousel-item">
-                        <img src="https://images.squarespace-cdn.com/content/v1/5810fd3520099ebb7c304192/1525148043894-332VS8NKW95SBRMO000L/black-banner-noise.png?format=2500w" className="d-block w-100" alt="..." />
-                          <div className="carousel-caption d-none d-md-block">
-                            <h5>Second slide label</h5>
-                            <p>Some representative placeholder content for the second slide.</p>
-                          </div>
-                      </div>
-                      <div className="carousel-item">
-                        <img src="https://images.squarespace-cdn.com/content/v1/5810fd3520099ebb7c304192/1525148043894-332VS8NKW95SBRMO000L/black-banner-noise.png?format=2500w" className="d-block w-100" alt="..." />
-                          <div className="carousel-caption d-none d-md-block">
-                            <h5>Third slide label</h5>
-                            <p>Some representative placeholder content for the third slide.</p>
-                          </div>
-                      </div>
-                    </div>
-                    <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                      <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-                      <span className="visually-hidden">Previous</span>
-                    </button>
-                    <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                      <span className="carousel-control-next-icon" aria-hidden="true"></span>
-                      <span className="visually-hidden">Next</span>
-                    </button>
-                  </div>
+                  <Swiper
+                    spaceBetween={50}
+                    slidesPerView={3}
+                    onSlideChange={() => console.log('slide change')}
+                    onSwiper={(swiper) => console.log(swiper)}
+                    pagination={pagination}
+                    modules={[
+                      Navigation,
+                      Pagination,
+                      Keyboard,
+                      Mousewheel,
+                      HashNavigation,
+                      Lazy,
+                      Autoplay
+                    ]}
+                    breakpoints={{
+                      640: {
+                        slidesPerView: 2,
+                        spaceBetween: 20
+                      },
+                      768: {
+                        slidesPerView: 4,
+                        spaceBetween: 40
+                      },
+                      1024: {
+                        slidesPerView: 5,
+                        spaceBetween: 50
+                      }
+                    }}
+                    centeredSlides={true}
+                    keyboard={true}
+                    loop={true}
+                    hashNavigation={{
+                      replaceState: true
+                    }}
+                    mousewheel={true}
+                    autoHeight={true}
+                    lazy={{
+                      loadPrevNext: true
+                    }}
+                    autoplay={{
+                      delay: 2500,
+                      disableOnInteraction: false
+                    }}
+                  >
+                    <SwiperSlide data-hash="slide-ads-1">Slide 1</SwiperSlide>
+                    <SwiperSlide data-hash="slide-ads-2">Slide 2</SwiperSlide>
+                    <SwiperSlide data-hash="slide-ads-3">Slide 3</SwiperSlide>
+                    <SwiperSlide data-hash="slide-ads-4">Slide 4</SwiperSlide>
+                    ...
+                  </Swiper>
                 </div>
               </div>
               <div className="row">
@@ -62,6 +102,7 @@ const Dashboard = () => {
                 </div>
               </div>
             </div>
+            <FilterHeader />
         </Fragment>
   )
 }

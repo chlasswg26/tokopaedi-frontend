@@ -1,11 +1,22 @@
 .modal-header {
-    border-bottom: none;
+    display: flex!important;
+    flex-direction: row;
+    box-shadow: 0px 0px 6px 0px rgba(53, 50, 50, 0.25);
+}
+
+.modal-body {
+    height: 100vh;
+    padding: 0px;
 }
 
 .modal-title {
     font-weight: 600;
-    font-size: 28px;
-    line-height: 28px;
+    font-size: 22px;
+    line-height: 22px;
+}
+
+.btn-close {
+    background: transparent url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMSIgaGVpZ2h0PSIyMSIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDIxIDIxIj4KICA8cGF0aCBmaWxsPSIjOUI5QjlCIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGQ9Im0xOC4wNS43MjYtNy40MjQgNy40MjVMMy4yMDEuNzI2LjcyNiAzLjIwMWw3LjQyNSA3LjQyNUwuNzI2IDE4LjA1bDIuNDc1IDIuNDc1IDcuNDI1LTcuNDI0IDcuNDI1IDcuNDI0IDIuNDc1LTIuNDc1LTcuNDI1LTcuNDI0TDIwLjUyNiAzLjIgMTguMDUuNzI2WiIgY2xpcC1ydWxlPSJldmVub2RkIi8+Cjwvc3ZnPgo=") center/1.25em auto no-repeat;
 }
 
 .btn-close:hover {
