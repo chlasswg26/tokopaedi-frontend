@@ -80,6 +80,9 @@ input[type="radio"] {
 .btn-discard {
     width: 3.5cm;
     height: 2.35rem;
+    font-size: 1em;
+    font-weight: 600;
+    line-height: 20px;
 }
 
 .btn-discard:hover {
@@ -107,9 +110,11 @@ input[type="radio"] {
     align-items: center;
     width: 3.5cm;
     height: 2.35rem;
-    font-size: 0.95em;
     color: white;
     background-color: mediumseagreen;
+    font-size: 1em;
+    font-weight: 600;
+    line-height: 20px;
 }
 
 .btn-apply:hover {

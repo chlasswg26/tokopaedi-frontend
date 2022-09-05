@@ -1,0 +1,126 @@
+.swiper-slide img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    list-style: none;
+    border-radius: 0.25cm;
+}
+
+.centered {
+    position: absolute;
+    text-align: center;
+    top: 40%;
+    left: 0;
+    right: 0;
+    width: auto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.5em;
+    color: #FFFFFF;
+}
+
+.swiper-button-next {
+    position: absolute;
+    width: 1.2cm;
+    color: rgba(155, 155, 155, 1);
+    background-color: white;
+    border-radius: 2cm;
+    right: 0.1cm;
+    cursor: pointer;
+    box-shadow: 0 .2rem .2rem var(--bs-gray-500);
+}
+
+.swiper-button-next::after {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 1.15em;
+}
+
+.swiper-button-next:hover {
+    color: white;
+    background-color: mediumseagreen;
+    -webkit-box-shadow: none;
+    box-shadow: 0 .2rem .2rem var(--bs-gray-500);
+}
+
+.swiper-button-next:active {
+    transform: scale(0.95);
+}
+
+.swiper-button-prev {
+    position: absolute;
+    width: 1.2cm;
+    color: rgba(155, 155, 155, 1);
+    background-color: white;
+    border-radius: 2cm;
+    left: 0.1cm;
+    cursor: pointer;
+    box-shadow: 0 .2rem .2rem var(--bs-gray-500);
+}
+
+.swiper-button-prev::after {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 1.15em;
+}
+
+.swiper-button-prev:hover {
+    color: white;
+    background-color: mediumseagreen;
+    -webkit-box-shadow: none;
+    box-shadow: 0 .2rem .2rem var(--bs-gray-500);
+}
+
+.swiper-button-prev:active {
+    transform: scale(0.95);
+}
+
+.swiper-pagination-horizontal {
+    position: relative!important;
+    text-align: start!important;
+    margin-inline-start: 0.5rem;
+    bottom: 0px!important;
+}
+
+.swiper-pagination-bullet {
+    margin-top: 10px!important;
+    text-align: center;
+    color: #000;
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.swiper-pagination-bullet-active {
+    color: #fff;
+    background: mediumseagreen;
+}
+
+@media screen and (min-width: 575.98px) {
+    .swiper-container {
+        width: 575.98px;
+    }
+}
+
+@media screen and (min-width: 767.98px) {
+    .swiper-container {
+        width: 767.98px;
+    }
+}
+
+@media screen and (min-width: 991.98px) {
+    .swiper-container {
+        width: 991.98px;
+    }
+}
+
+@media screen and (min-width: 1199.98px) {
+    .swiper-container {
+        width: 1199.98px;
+    }
+}
+
+@media screen and (min-width: 1399.98px) {
+    .swiper-container {
+        width: 1399.98px;
+    }
+}

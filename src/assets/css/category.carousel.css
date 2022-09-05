@@ -1,0 +1,24 @@
+.category-centered {
+    position: absolute;
+    text-align: center;
+    top: 45%;
+    left: 0;
+    right: 0;
+    width: auto;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 1.2em;
+    color: #FFFFFF;
+}
+
+.content-wrapper {
+    width: 4.55cm;
+    height: 4.7cm;
+    border-radius: 0.25cm;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    max-width: 100%;
+    object-fit: cover;
+    list-style: none;
+}
