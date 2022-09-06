@@ -5,7 +5,7 @@ const ProductCard = () => {
   return (
     <Fragment>
         <div className="card card-product-1">
-            <img src="https://cf.shopee.co.id/file/d03bb07aa7c42b05c479bcc5d867c2bb_tn" className="card-img-top" alt="Demo" />
+            <img src="https://cf.shopee.co.id/file/d03bb07aa7c42b05c479bcc5d867c2bb_tn" alt="Image product" className="card-img-top" />
             <div className="card-body">
                 <h5 className="card-title truncate-title-product">{'Men\'s formal suit - Black & White'}</h5>
                 <h5 className="card-price truncate-price-product">$ 40.0</h5>

@@ -12,7 +12,7 @@ const Dashboard = () => {
     <Fragment>
         <UserHeader />
         {/* <GuestHeader /> */}
-        <div className="container">
+        <div className="container mb-5">
           <div className="row mb-5">
             <div className="col">
               <HighlightCarousel />
@@ -36,7 +36,7 @@ const Dashboard = () => {
                 <span className="dashboard-caption">You’ve never seen it before!</span>
               </div>
             </div>
-            <div className="row justify-content-center">
+            <div className="container justify-content-center">
               <div className="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-5">
                 <div className="col p-1">
                   <ProductCard />
@@ -78,7 +78,7 @@ const Dashboard = () => {
                 <span className="dashboard-caption">Find clothes that are trending recently</span>
               </div>
             </div>
-            <div className="row justify-content-center">
+            <div className="container justify-content-center">
               <div className="row row-cols-2 row-cols-sm-2 row-cols-md-3 row-cols-lg-5">
                 <div className="col p-1">
                   <ProductCard />

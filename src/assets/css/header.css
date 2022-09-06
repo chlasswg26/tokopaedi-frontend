@@ -3,7 +3,7 @@ header {
     padding-right: 8vw;
     justify-content: center;
     box-shadow: 0px 0px 15px var(--bs-gray-400);
-    margin-bottom: 7vh;
+    margin-bottom: 8.5vh;
     z-index: 1;
 }
 
@@ -524,6 +524,20 @@ header {
 *::selection {
     color: white;
     background-color: mediumseagreen;
+}
+
+@media (min-width: 2049px) {
+    .left-component {
+        gap: 2vw;
+    }
+
+    .right-component {
+        gap: 3vw;
+    }
+
+    .search-control {
+        width: 40rem;
+    }
 }
 
 @media (max-width: 1240.80px) {

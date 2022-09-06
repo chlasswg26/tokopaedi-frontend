@@ -1,0 +1,40 @@
+.search-title {
+    color: var(--bs-dark);
+    font-style: bold;
+    font-weight: 800;
+    font-size: 2em;
+}
+
+.truncate-search-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.breadcrumb {
+    color: rgba(155, 155, 155, 1);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.breadcrumb > li > a {
+    text-decoration: none!important;
+    color: rgba(155, 155, 155, 1)!important;
+}
+
+.breadcrumb-divider {
+    --bs-breadcrumb-divider: '>';
+}
+
+.truncate-page-search {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    font-weight: 800;
+    font-size: 1.1em;
+}
