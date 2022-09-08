@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import { Routes, Route } from 'react-router-dom'
+import Login from './pages/auth/login'
 import Cart from './pages/cart'
 import Dashboard from './pages/dashboard'
 import Search from './pages/search'
@@ -11,6 +12,7 @@ const App = () => {
         <Route path="/" index element={<Dashboard />} />
         <Route path="search" element={<Search />} />
         <Route path="cart" element={<Cart />} />
+        <Route path="auth/signin" element={<Login />} />
         {/* <Route  */}
       </Routes>
     </Fragment>
