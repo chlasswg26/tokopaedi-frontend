@@ -6,6 +6,8 @@ const Modal = (props) => {
   const {
     modalId,
     modalTitle,
+    modalSize,
+    styled,
     children,
     enableFooter,
     footerContent
@@ -14,19 +16,30 @@ const Modal = (props) => {
   return (
         <Fragment>
             <div className="modal fade" id={modalId} data-bs-backdrop="static" data-bs-keyboard="true" tabIndex="-1" aria-labelledby={modalId} aria-hidden="true">
-              <div className="modal-dialog modal-md modal-dialog-centered modal-dialog-scrollable">
+              <div className={`modal-dialog ${modalSize} modal-dialog-centered modal-dialog-scrollable`}>
                 <div className="modal-content">
-                  <div className="modal-header">
-                    <div className="hstack gap-4">
-                      <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                      <h5 className="modal-title">{modalTitle}</h5>
+                  {styled
+                    ? (
+                    <div className="modal-header shadow-none border-0">
+                      <button type="button" className="btn-close p-3" data-bs-dismiss="modal" aria-label="Close" />
                     </div>
-                  </div>
+                      )
+                    : (
+                    <div className="modal-header">
+                      <div className="hstack gap-4">
+                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" />
+                        <h5 className="modal-title">{modalTitle}</h5>
+                      </div>
+                    </div>
+                      )}
                   <div className="modal-body">
+                    {styled && (
+                      <h5 className="modal-title mb-5 text-center">{modalTitle}</h5>
+                    )}
                     {children}
                   </div>
                   {enableFooter && (
-                    <div className="modal-footer">
+                    <div className={`modal-footer ${styled && 'border-0 p-4'}`}>
                       {footerContent}
                     </div>
                   )}
@@ -40,6 +53,8 @@ const Modal = (props) => {
 Modal.propTypes = {
   modalId: PropTypes.string,
   modalTitle: PropTypes.string,
+  modalSize: PropTypes.string,
+  styled: PropTypes.bool,
   children: PropTypes.element,
   enableFooter: PropTypes.bool,
   footerContent: PropTypes.element
@@ -48,6 +63,8 @@ Modal.propTypes = {
 Modal.defaultProps = {
   modalId: 'no-indexed-id',
   modalTitle: 'Modal Title',
+  modalSize: 'modal-md',
+  styled: false,
   enableFooter: false
 }
 

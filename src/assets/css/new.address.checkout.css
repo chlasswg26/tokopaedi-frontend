@@ -1,0 +1,71 @@
+.btn-cancel-modal {
+    width: 4.35cm;
+    color: var(--bs-gray-500);
+    background-color: white;
+    border: 1px solid var(--bs-gray-500);
+}
+
+.btn-cancel-modal:hover, .btn-cancel-modal:focus {
+    color: white;
+    background-color: mediumseagreen;
+}
+
+.btn-save-modal {
+    width: 4.35cm;
+    color: white;
+    background-color: mediumseagreen;
+}
+
+.btn-save-modal:hover, .btn-save-modal:focus {
+    color: mediumseagreen;
+    background-color: white;
+    border: 1px solid mediumseagreen;
+}
+
+.btn-cancel-modal:active,
+.btn-save-modal:active {
+    scale: 0.95;
+}
+
+.new-address-label {
+    color: rgba(155, 155, 155, 1);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.95em;
+}
+
+.row-input-address {
+    width: 95%;
+}
+
+.font-input,
+.font-input:not(:placeholder-shown),
+.font-input:focus,
+.font-label,
+.font-label:placeholder-shown {
+    font-size: 1.1rem;
+    color: var(--bs-gray-500);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+    border: 1px solid var(--bs-gray-500);
+}
+
+
+@media (min-width: 992px) {
+    .address-content-footer {
+        justify-content: end;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .address-content-footer {
+        justify-content: center;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 540.40px) {
+    .address-content-footer {
+        justify-content: center;
+    }
+}

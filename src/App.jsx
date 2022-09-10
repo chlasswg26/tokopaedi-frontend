@@ -1,7 +1,9 @@
 import React, { Fragment } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Login from './pages/auth/login'
+import Register from './pages/auth/register'
 import Cart from './pages/cart'
+import Checkout from './pages/checkout'
 import Dashboard from './pages/dashboard'
 import Search from './pages/search'
 
@@ -13,6 +15,8 @@ const App = () => {
         <Route path="search" element={<Search />} />
         <Route path="cart" element={<Cart />} />
         <Route path="auth/signin" element={<Login />} />
+        <Route path="auth/signup" element={<Register />} />
+        <Route path="checkout" element={<Checkout />} />
         {/* <Route  */}
       </Routes>
     </Fragment>

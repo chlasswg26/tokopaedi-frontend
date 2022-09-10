@@ -1,0 +1,19 @@
+.summary-font-color {
+    color: mediumseagreen;
+}
+
+.btn-pay-font {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1em;
+}
+
+.btn-select-address {
+    color: var(--bs-gray-500);
+    width: 6.5cm;
+    background-color: white;
+    border: 1px solid var(--bs-gray-500);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1em;
+}

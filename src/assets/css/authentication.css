@@ -1,0 +1,112 @@
+.content-size {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 30vh;
+}
+
+.caption {
+    font-size: 1.2em;
+    font-weight: 800;
+}
+
+.custom-btn-customer {
+    width: 0px;
+    color: mediumseagreen;
+    background-color: white;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border: 1px solid var(--bs-gray-500);
+}
+
+.custom-btn-customer:hover, .custom-btn-customer:focus {
+    color: white;
+    background-color: mediumseagreen;
+    border: 1px solid mediumseagreen;
+}
+
+.custom-btn-seller {
+    width: 0px;
+    color: white;
+    background-color: mediumseagreen;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.custom-btn-seller:hover, .custom-btn-seller:focus {
+    color: white;
+    background-color: mediumseagreen;
+    border: 1px solid mediumseagreen;
+}
+
+.size-input {
+    width: 13.5cm;
+}
+
+@media (max-width: 575.98px) {
+    .size-input {
+        width: 9cm;
+    }
+}
+
+.font-input,
+.font-input:not(:placeholder-shown),
+.font-input:focus,
+.font-label,
+.font-label:placeholder-shown {
+    font-size: 1.1rem;
+    color: var(--bs-gray-500);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+    border: 1px solid var(--bs-gray-500);
+}
+
+.btn-link, .btn-link:hover {
+    text-decoration: none!important;
+    color: mediumseagreen;
+}
+
+.btn-login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 13.9cm;
+    height: 1.25cm;
+    color: white;
+    background-color: mediumseagreen;
+}
+
+@media (max-width: 575.98px) {
+    .btn-login-page {
+        width: 9cm;
+        height: 1.3cm;
+    }
+}
+
+.btn-login-page:hover {
+    color: mediumseagreen;
+    background-color: transparent;
+    border: 1px solid mediumseagreen;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    --bs-btn-focus-shadow-rgb: none;
+}
+
+.btn-login-page:focus {
+    color: white;
+    background-color: mediumseagreen;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    --bs-btn-focus-shadow-rgb: none;
+}
+
+.btn-login-page:active {
+    transform: scale(0.8);
+}
+
+.btn-primary-auth {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 1.1em;
+}

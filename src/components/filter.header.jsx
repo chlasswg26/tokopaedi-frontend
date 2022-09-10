@@ -1,5 +1,5 @@
 import React, { Fragment, useState, useEffect } from 'react'
-import FilterModal from './modal'
+import Modal from './modal'
 
 const ModalFooter = () => {
   return (
@@ -29,11 +29,11 @@ const FilterHeader = () => {
 
   return (
         <Fragment>
-            <FilterModal
-            modalId="filterModal"
-            modalTitle="Filter"
-            enableFooter={true}
-            footerContent={<ModalFooter />}>
+            <Modal
+              modalId="filterModal"
+              modalTitle="Filter"
+              enableFooter={true}
+              footerContent={<ModalFooter />}>
               <Fragment>
                 <div className="vstack gap-4 bottom-color">
                   <p className="modal-filter-title">Colors</p>
@@ -114,7 +114,7 @@ const FilterHeader = () => {
                 </div>
                 <hr className="solid mb-5" />
               </Fragment>
-            </FilterModal>
+            </Modal>
         </Fragment>
   )
 }
