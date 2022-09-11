@@ -31,7 +31,7 @@ const NewAddressModal = () => {
                 footerContent={<ModalFooter />}>
                 <Fragment>
                     <div className="container row-input-address">
-                      <div className="row gy-3">
+                      <div className="row gy-3 mb-4">
                         <div className="col-12">
                             <label htmlFor="address-rumah" className="form-label d-inline new-address-label">Save address as (ex : home address, office address)</label>
                             <input className="form-control form-control-lg mt-2 font-input" type="text" id="address-rumah" placeholder="Rumah" />
@@ -56,6 +56,12 @@ const NewAddressModal = () => {
                             <label htmlFor="address-city" className="form-label d-inline new-address-label">City</label>
                             <input className="form-control form-control-lg mt-2 font-input" type="text" id="address-city" />
                         </div>
+                      </div>
+                      <div className="form-check">
+                        <input className="form-check-input checkbox-address" type="checkbox" id="primary-address" />
+                        <label className="form-check-label d-inline label-checkbox" htmlFor="primary-address">
+                            Make it the primary address
+                        </label>
                       </div>
                     </div>
                 </Fragment>

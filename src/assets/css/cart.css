@@ -54,9 +54,15 @@
     border-radius: 0.13cm!important;
 }
 
-.form-check-input:checked, .form-check-input:indeterminate {
-    background-color: mediumseagreen !important;
+.form-check-input:checked {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxNSIgaGVpZ2h0PSIxMiIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDE1IDEyIj4KICA8cGF0aCBmaWxsPSIjZmZmIiBkPSJNNC43NjcgOS40NjggMS4yMSA1LjczNiAwIDYuOTk4IDQuNzY3IDEyIDE1IDEuMjYyIDEzLjc5OCAwIDQuNzY3IDkuNDY4WiIvPgo8L3N2Zz4K)!important;
+    background-color: mediumseagreen!important;
+    background-size: 0.46cm;
     border: 0;
+}
+
+.form-check-input:indeterminate {
+    background-color: mediumseagreen!important;
 }
 
 .form-check-input:focus,
@@ -177,17 +183,20 @@ label.form-check-label:focus,
     font-size: 18px;
     color: white;
     background-color: mediumseagreen;
+    filter: drop-shadow(0px 1px 2.5px mediumseagreen);
 }
 
 .btn-buy:hover {
     color: mediumseagreen;
     background-color: white;
     border: 1px solid mediumseagreen;
+    filter: none;
 }
 
 .btn-buy:focus {
     color: white;
     background-color: mediumseagreen;
+    filter: none;
 }
 
 .btn-buy:active {
@@ -210,7 +219,7 @@ label.form-check-label:focus,
     line-break: anywhere;
     line-clamp: 3;
     text-overflow: ellipsis;
-    margin-top: 3.3cm;
+    margin-top: 3.35cm;
 }
 
 @media (max-width: 1241.82px) {
@@ -226,14 +235,21 @@ label.form-check-label:focus,
     }
 }
 
-@media (max-width: 545.40px) {
+@media (min-width: 0px) and (max-width: 540.40px) {
     .truncate-cart-price-item {
         display: none;
     }
-}
-
-@media (min-width: 0px) and (max-width: 540.40px) {
+    
     .mobile-price-text {
         display: block;
+        text-align: right!important;
+    }
+
+    .fill-cart-box {
+        max-width: 100%;
+    }
+
+    .cart-form-wrapper {
+        margin-bottom: 0.5cm;
     }
 }

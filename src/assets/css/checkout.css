@@ -2,6 +2,10 @@
     color: mediumseagreen;
 }
 
+.checkout-product-title {
+    min-width: 45%;
+}
+
 .btn-pay-font {
     font-style: normal;
     font-weight: 600;
@@ -16,4 +20,12 @@
     font-style: normal;
     font-weight: 600;
     font-size: 1em;
+}
+
+.box-checkout {
+    margin-left: 0.2cm;
+}
+
+.btn-choose-address {
+    filter: none;
 }

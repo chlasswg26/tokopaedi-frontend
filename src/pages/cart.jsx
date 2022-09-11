@@ -24,7 +24,7 @@ const Cart = () => {
         <div className="container">
             <div className="row">
                 <div className="col">
-                    <div className="vstack mb-5">
+                    <div className="vstack mb-4">
                         <h1><strong>My Bag</strong></h1>
                     </div>
                 </div>
@@ -32,7 +32,7 @@ const Cart = () => {
             <div className="row gy-4">
                 <div className="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-7 col-xxl-7">
                     <div className="hstack align-items-center justify-content-between cart-card mb-5">
-                        <div className="form-check cart-form-wrapper">
+                        <div className="form-check cart-form-wrapper mb-0">
                             <IndeterminateCheckbox
                                 checked={selected.length === groceryList.length}
                                 indeterminate={indeterminateValue}

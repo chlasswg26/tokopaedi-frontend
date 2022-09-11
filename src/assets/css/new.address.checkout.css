@@ -14,12 +14,14 @@
     width: 4.35cm;
     color: white;
     background-color: mediumseagreen;
+    filter: drop-shadow(0px 1px 2.5px mediumseagreen);
 }
 
 .btn-save-modal:hover, .btn-save-modal:focus {
     color: mediumseagreen;
     background-color: white;
     border: 1px solid mediumseagreen;
+    filter: none;
 }
 
 .btn-cancel-modal:active,
@@ -43,12 +45,29 @@
 .font-input:focus,
 .font-label,
 .font-label:placeholder-shown {
-    font-size: 1.1rem;
+    font-size: 1em;
     color: var(--bs-gray-500);
     -webkit-box-shadow: none;
     box-shadow: none;
     outline: none;
-    border: 1px solid var(--bs-gray-500);
+    border: 0.06cm solid var(--bs-gray-400);
+    border-radius: 0.12cm;
+}
+
+.checkbox-address {
+    width: 0.55cm;
+    height: 0.55cm;
+    border: 0.06cm solid var(--bs-gray-400);
+    border-radius: 0.12cm;
+    margin-right: 0.4cm;
+}
+
+.label-checkbox {
+    color: rgba(155, 155, 155, 1);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 0.95em;
+    vertical-align: text-top;
 }
 
 

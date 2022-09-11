@@ -27,7 +27,7 @@ const Modal = (props) => {
                     : (
                     <div className="modal-header">
                       <div className="hstack gap-4">
-                        <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close" />
+                        <button type="button" className="btn-close p-2" data-bs-dismiss="modal" aria-label="Close" />
                         <h5 className="modal-title">{modalTitle}</h5>
                       </div>
                     </div>
@@ -39,7 +39,7 @@ const Modal = (props) => {
                     {children}
                   </div>
                   {enableFooter && (
-                    <div className={`modal-footer ${styled && 'border-0 p-4'}`}>
+                    <div className={`modal-footer footer-shadow ${styled && 'border-0 p-4 shadow-none'}`}>
                       {footerContent}
                     </div>
                   )}

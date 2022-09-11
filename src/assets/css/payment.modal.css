@@ -1,0 +1,14 @@
+.label-box-img {
+    display: flex;
+    width: 2cm;
+    height: auto;
+}
+
+.label-payment {
+    color: var(--bs-gray-dark);
+    margin-left: 1.2cm;
+}
+
+.btn-pay {
+    width: 4.3cm;
+}
