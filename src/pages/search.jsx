@@ -74,8 +74,9 @@ const Search = () => {
                         total={totalPages}
                         current={currentPage}
                         onPageChange={page => handlePageChange(page)}
+                        previousLabel="Prev"
                         nextLabel="Next"
-                        previousLabel="Previous"
+                        narrowStrategy="dropEllipsis"
                     />
                 </div>
           </div>
