@@ -32,7 +32,7 @@
 
 .image-gallery-thumbnails .image-gallery-thumbnails-container {
     display: inline-flex;
-    gap: 0.3cm;
+    gap: 0.155cm;
 }
 
 .image-gallery {
@@ -59,4 +59,133 @@
     width: 100%;
     height: auto;
     object-fit: contain!important;
+}
+
+.image-gallery-svg {
+    width: 0.8cm!important;
+    height: 0.8cm!important;
+}
+
+.image-gallery-fullscreen-button:hover,
+.image-gallery-fullscreen-button:focus {
+    color: mediumseagreen!important;
+}
+
+.image-gallery-fullscreen-button:not(.image-gallery-fullscreen-button:focus) {
+    color: white;
+}
+
+.product-title {
+    font-style: normal;
+    font-weight: 800;
+    font-size: 1.85em;
+}
+
+.truncate-product-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+.seller-title {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1em;
+}
+
+.bolder-price {
+    font-style: normal;
+    font-weight: 1000;
+    font-size: 1.8em;
+}
+
+label span.darker {
+    background: rgba(26, 26, 26, 1);
+}
+
+label span.crimson {
+    background: rgba(216, 66, 66, 1);
+}
+
+label span.blueish {
+    background: rgba(66, 144, 216, 1);
+}
+
+label span.seagreen {
+    background: rgba(66, 216, 108, 1);
+}
+
+.is-product-color-active {
+    box-sizing: border-box;
+    border: 2.5px solid white;
+    outline: 2px solid mediumseagreen;
+}
+
+.custom-size-btn-color {
+    width: 1.2cm;
+    height: 1.2cm;
+}
+
+.count-title {
+    margin-left: 0.5cm;
+}
+
+.condition-title {
+    font-weight: 800;
+    font-size: 1.3em;
+    line-height: 0.5cm;
+}
+
+.condition-label {
+    color: mediumseagreen;
+    font-weight: 800;
+    font-size: 1.3em;
+}
+
+.description-title {
+    font-weight: 800;
+    font-size: 1.5em;
+    line-height: 1cm;
+}
+
+.description-content {
+    color: #9B9B9B;
+    font-weight: 800;
+    font-size: 1em;
+}
+
+.btn-add-bag {
+    width: 5cm;
+    height: 1.7cm;
+}
+
+.btn-buying {
+    width: 5cm;
+    height: 1.7cm;
+}
+
+@media (min-width: 1092px) {
+    .image-gallery {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1.5cm;
+    }
+    
+    .image-gallery-slide img {
+        object-fit: contain!important;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 1091px) {
+    .image-gallery {
+        width: 100%;
+        height: auto;
+        margin-bottom: 1.5cm;
+    }
+    
+    .image-gallery-slide img {
+        object-fit: contain!important;
+    }
 }
