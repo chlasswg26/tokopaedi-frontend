@@ -8,5 +8,8 @@ export default defineConfig({
     alias: {
       '~react-image-gallery': path.resolve(__dirname, 'node_modules/react-image-gallery')
     }
+  },
+  build: {
+    chunkSizeWarningLimit: 1600
   }
 })
