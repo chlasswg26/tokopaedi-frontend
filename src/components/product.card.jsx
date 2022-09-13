@@ -9,7 +9,7 @@ const ProductCard = () => {
             <div className="card-body">
                 <h5 className="card-title truncate-title-product">{'Men\'s formal suit - Black & White'}</h5>
                 <h5 className="card-price truncate-price-product">$ 40.0</h5>
-                <p className="card-text truncate-seller-product"><small className="text-muted">Zalora Cloth</small></p>
+                <p className="card-text truncate-seller-product">Zalora Cloth</p>
                 <div className="wrapper-rating">
                     <div className="ratings">
                         <i className="fa fa-star rating-color"></i>

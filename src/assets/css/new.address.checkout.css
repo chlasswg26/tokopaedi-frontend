@@ -32,7 +32,7 @@
 .new-address-label {
     color: rgba(155, 155, 155, 1);
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 0.95em;
 }
 
@@ -65,7 +65,7 @@
 .label-checkbox {
     color: rgba(155, 155, 155, 1);
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 0.95em;
     vertical-align: text-top;
 }

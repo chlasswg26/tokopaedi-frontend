@@ -36,6 +36,7 @@
 }
 
 .page-item.active .page-link {
+    font-style: normal;
     font-weight: 700;
     color: white;
     background-color: mediumseagreen;

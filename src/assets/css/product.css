@@ -1,7 +1,7 @@
 .breadcrumb {
     color: rgba(155, 155, 155, 1);
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 14px;
 }
 
@@ -133,6 +133,7 @@ label span.seagreen {
 }
 
 .condition-title {
+    font-style: normal;
     font-weight: 800;
     font-size: 1.3em;
     line-height: 0.5cm;
@@ -140,11 +141,13 @@ label span.seagreen {
 
 .condition-label {
     color: mediumseagreen;
+    font-style: normal;
     font-weight: 800;
     font-size: 1.3em;
 }
 
 .description-title {
+    font-style: normal;
     font-weight: 800;
     font-size: 1.5em;
     line-height: 1cm;
@@ -152,18 +155,56 @@ label span.seagreen {
 
 .description-content {
     color: #9B9B9B;
+    font-style: normal;
     font-weight: 800;
     font-size: 1em;
 }
 
-.btn-add-bag {
-    width: 5cm;
-    height: 1.7cm;
+.btn-chat, .btn-add-bag {
+    width: 4cm;
+    height: 1.5cm;
+    color: var(--bs-dark);
+    background-color: white;
+    border: 2px solid var(--bs-gray-dark);
+    border-radius: 1cm;
+}
+
+.btn-chat:hover,
+.btn-add-bag:hover {
+    color: mediumseagreen;
+    background-color: white;
+    border: 2px solid mediumseagreen;
+}
+
+.btn-chat:focus,
+.btn-add-bag:focus {
+    color: white;
+    background-color: mediumseagreen;
+    border: 2px solid mediumseagreen;
+    filter: drop-shadow(0px 1px 2.5px mediumseagreen);
 }
 
 .btn-buying {
-    width: 5cm;
-    height: 1.7cm;
+    width: 10cm;
+    height: 1.5cm;
+    color: white;
+    background-color: mediumseagreen;
+    border: 2px solid mediumseagreen;
+    filter: drop-shadow(0px 1px 2.5px mediumseagreen);
+    border-radius: 1cm;
+}
+
+.btn-buying:hover, .btn-buying:focus {
+    color: white;
+    background-color: mediumseagreen;
+    border: 2px solid mediumseagreen;
+    filter: drop-shadow(0px 1px 2.5px mediumseagreen);
+}
+
+.product-btn-font-size {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.45cm;
 }
 
 @media (min-width: 1092px) {
@@ -187,5 +228,21 @@ label span.seagreen {
     
     .image-gallery-slide img {
         object-fit: contain!important;
+    }
+    
+    .btn-chat, .btn-add-bag {
+        width: 100%;
+    }
+
+    .btn-buying {
+        width: 100%;
+        margin-top: 1cm;
+    }
+
+    .group-on-mobile {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }

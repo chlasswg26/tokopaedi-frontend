@@ -42,7 +42,9 @@
 }
 
 .card-text {
-    font-weight: 500;
+    color: var(--bs-gray-600);
+    font-style: normal;
+    font-weight: 600;
 }
 
 .truncate-seller-product {
@@ -72,6 +74,6 @@
 .review-count {
     color: var(--bs-gray-500);
     font-style: normal;
-    font-weight: 500;
+    font-weight: 600;
     font-size: 1em;
 }
