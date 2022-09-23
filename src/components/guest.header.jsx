@@ -18,94 +18,92 @@ const GuestHeader = () => {
             <header>
                 <div className="container">
                     <nav className="navbar">
-                        <div className="container-fluid">
-                            <div className="hstack left-component">
-                                <a className="navbar-brand" href="/">
-                                    <img src={logo} alt="Tokopaedi" loading="lazy" />
-                                </a>
-                                <div className="hstack center-component gap-5">
+                        <div className="hstack left-component gap-nav-guest-mobile">
+                            <a className="navbar-brand" href="/">
+                                <img src={logo} alt="Tokopaedi" loading="lazy" />
+                            </a>
+                            <div className="hstack center-component gap-header-guest-mobile">
                                 <form className="navbar-form d-flex input-group-lg" role="search">
-                                        <input
-                                            className="form-control rounded-pill search-control"
-                                            type="text"
-                                            placeholder="Search"
-                                            aria-label="Search"
-                                            list="listOfResult"
-                                            autoComplete="off"
-                                            id="searchResult"
-                                            onFocus={() => setIsFocus(true)}
-                                            onBlur={() => onBlurDatalist()}
-                                            onClick={(event) => console.log('option clicked', event)}
-                                            onChange={() => setIsFocus(true)} />
-                                        <datalist id="listOfResult" style={{ height: isFocus ? '53vh' : '0vh', width: isFocus ? '35vw!important' : '0vw' }}>
-                                            <option key={0} value="San Francisco">
-                                                San Francisco
-                                            </option>
-                                            <option key={1} value="New York">
-                                                New York
-                                            </option>
-                                            <option key={2} value="Seattle">
-                                                Seattle
-                                            </option>
-                                            <option key={3} value="Los Angeles">
-                                                Los Angeles
-                                            </option>
-                                            <option key={4} value="Chicago">
-                                                Chicago
-                                            </option>
-                                            <option key={5} value="San Francisco">
-                                                San Francisco
-                                            </option>
-                                            <option key={6} value="New York">
-                                                New York
-                                            </option>
-                                            <option key={7} value="Seattle">
-                                                Seattle
-                                            </option>
-                                            <option key={8} value="Los Angeles">
-                                                Los Angeles
-                                            </option>
-                                            <option key={9} value="Chicago">
-                                                Chicago
-                                            </option>
-                                            <option key={10} value="San Francisco">
-                                                San Francisco
-                                            </option>
-                                            <option key={11} value="New York">
-                                                New York
-                                            </option>
-                                            <option key={12} value="Seattle">
-                                                Seattle
-                                            </option>
-                                            <option key={13} value="Los Angeles">
-                                                Los Angeles
-                                            </option>
-                                            <option key={14} value="Chicago">
-                                                Chicago
-                                            </option>
-                                        </datalist>
-                                        <button type="button" className="btn btn-search">
-                                            <img src={searchIcon} alt="Search" loading="lazy" />
-                                        </button>
-                                    </form>
-                                <div className="hstack right-component gap-3 align-items-center group-btn-navbar">
-                                    <button type="button" className="btn btn-cart">
-                                        <img src={cartIcon} alt="Cart" loading="lazy" />
+                                    <input
+                                        className="form-control rounded-pill search-control"
+                                        type="text"
+                                        placeholder="Search"
+                                        aria-label="Search"
+                                        list="listOfResult"
+                                        autoComplete="off"
+                                        id="searchResult"
+                                        onFocus={() => setIsFocus(true)}
+                                        onBlur={() => onBlurDatalist()}
+                                        onClick={(event) => console.log('option clicked', event)}
+                                        onChange={() => setIsFocus(true)} />
+                                    <datalist id="listOfResult" style={{ height: isFocus ? '53vh' : '0vh', width: isFocus ? '35vw!important' : '0vw' }}>
+                                        <option key={0} value="San Francisco">
+                                            San Francisco
+                                        </option>
+                                        <option key={1} value="New York">
+                                            New York
+                                        </option>
+                                        <option key={2} value="Seattle">
+                                            Seattle
+                                        </option>
+                                        <option key={3} value="Los Angeles">
+                                            Los Angeles
+                                        </option>
+                                        <option key={4} value="Chicago">
+                                            Chicago
+                                        </option>
+                                        <option key={5} value="San Francisco">
+                                            San Francisco
+                                        </option>
+                                        <option key={6} value="New York">
+                                            New York
+                                        </option>
+                                        <option key={7} value="Seattle">
+                                            Seattle
+                                        </option>
+                                        <option key={8} value="Los Angeles">
+                                            Los Angeles
+                                        </option>
+                                        <option key={9} value="Chicago">
+                                            Chicago
+                                        </option>
+                                        <option key={10} value="San Francisco">
+                                            San Francisco
+                                        </option>
+                                        <option key={11} value="New York">
+                                            New York
+                                        </option>
+                                        <option key={12} value="Seattle">
+                                            Seattle
+                                        </option>
+                                        <option key={13} value="Los Angeles">
+                                            Los Angeles
+                                        </option>
+                                        <option key={14} value="Chicago">
+                                            Chicago
+                                        </option>
+                                    </datalist>
+                                    <button type="button" className="btn btn-search">
+                                        <img src={searchIcon} alt="Search" loading="lazy" />
                                     </button>
-                                    <div className="hstack align-items-center gap-2">
-                                        <button type="button" className="btn rounded-pill btn-login">
-                                            Login
-                                        </button>
-                                        <button type="button" className="btn rounded-pill btn-register">
-                                            Signup
-                                        </button>
-                                    </div>
-                                    </div>
-                                </div>
-                                <button className="navbar-toggler toggler-offcanvas d-xl-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-expanded="false" aria-controls="offcanvasNavbar">
-                                    <span className="navbar-toggler-icon"></span>
+                                </form>
+                                <div className="hstack right-component gap-3 align-items-center group-btn-navbar">
+                                <button type="button" className="btn btn-cart">
+                                    <img src={cartIcon} alt="Cart" loading="lazy" />
                                 </button>
+                                <div className="hstack align-items-center gap-2">
+                                    <button type="button" className="btn rounded-pill btn-login">
+                                        Login
+                                    </button>
+                                    <button type="button" className="btn rounded-pill btn-register">
+                                        Signup
+                                    </button>
+                                </div>
                             </div>
+                            </div>
+                            <button className="navbar-toggler toggler-offcanvas d-xl-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-expanded="false" aria-controls="offcanvasNavbar">
+                                <span className="navbar-toggler-icon"></span>
+                            </button>
                         </div>
                     </nav>
                 </div>

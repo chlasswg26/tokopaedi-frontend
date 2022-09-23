@@ -6,6 +6,7 @@ import Cart from './pages/cart'
 import Checkout from './pages/checkout'
 import Dashboard from './pages/dashboard'
 import Product from './pages/product'
+import Profile from './pages/profile'
 import Search from './pages/search'
 
 const App = () => {
@@ -19,6 +20,7 @@ const App = () => {
         <Route path="auth/signup" element={<Register />} />
         <Route path="checkout" element={<Checkout />} />
         <Route path="product" element={<Product />} />
+        <Route path="profile" element={<Profile />} />
         {/* <Route  */}
       </Routes>
     </Fragment>
