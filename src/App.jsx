@@ -9,6 +9,9 @@ import Product from './pages/product'
 import Profile from './pages/profile'
 import Search from './pages/search'
 
+import StoreProfile from './components/store.profile'
+import EditProfile from './components/edit.profile'
+
 const App = () => {
   return (
     <Fragment>
@@ -20,8 +23,16 @@ const App = () => {
         <Route path="auth/signup" element={<Register />} />
         <Route path="checkout" element={<Checkout />} />
         <Route path="product" element={<Product />} />
-        <Route path="profile" element={<Profile />} />
-        {/* <Route  */}
+        <Route path="profile" element={<Profile />}>
+          <Route
+            path="edit"
+            element={<StoreProfile />}
+          />
+          <Route
+            path="selling"
+            element={<EditProfile />}
+          />
+        </Route>
       </Routes>
     </Fragment>
   )
