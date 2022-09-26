@@ -32,6 +32,7 @@
     "react-router-dom": "6",
     "react-select": "^5.4.0",
     "react-table": "^7.8.0",
+    "react-toastify": "^9.0.8",
     "redux-persist": "^6.0.0",
     "suneditor": "^2.44.1",
     "suneditor-react": "^3.4.1",

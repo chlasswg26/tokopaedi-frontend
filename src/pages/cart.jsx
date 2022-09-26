@@ -5,6 +5,7 @@ import FilterHeader from '../components/filter.header'
 import IndeterminateCheckbox from '../components/indeterminate.checkbox'
 import { groceryList } from '../constants/cart.data'
 import '../assets/css/cart.css'
+import { useNavigate } from 'react-router-dom'
 
 const Cart = () => {
   const [selected, setSelected] = useState([])
@@ -16,6 +17,7 @@ const Cart = () => {
       setSelected([])
     }
   }
+  const navigate = useNavigate()
 
   return (
     <Fragment>
@@ -99,7 +101,7 @@ const Cart = () => {
                                       <strong className="text-muted">Total price</strong>
                                       <strong className="price-checkout-font">$ 40.0</strong>
                                   </div>
-                                    <button className="btn rounded-pill btn-buy">
+                                    <button className="btn rounded-pill btn-buy" style={{ cursor: 'pointer' }} onClick={() => navigate('/checkout')}>
                                         Buy
                                     </button>
                             </div>

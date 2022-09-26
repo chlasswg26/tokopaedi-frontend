@@ -1,8 +1,11 @@
 import React, { Fragment } from 'react'
 import logo from '../../assets/img/logo.png'
 import '../../assets/css/authentication.css'
+import { useNavigate } from 'react-router-dom'
 
 const Login = () => {
+  const navigate = useNavigate()
+
   return (
     <Fragment>
         <div className="container p-4">
@@ -34,7 +37,7 @@ const Login = () => {
                 </div>
 
                   <div className="vstack align-items-center gap-5">
-                      <button type="button" className="btn rounded-pill btn-login-page">
+                      <button type="button" className="btn rounded-pill btn-login-page" onClick={() => navigate('/profile')}>
                         <strong className="btn-primary-auth">Login</strong>
                       </button>
 

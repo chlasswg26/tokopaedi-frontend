@@ -11,6 +11,7 @@ import Image5 from '../assets/img/product-5.png'
 import FilterHeader from '../components/filter.header'
 import Popout from '../components/popout'
 import ProductCard from '../components/product.card'
+import { useNavigate } from 'react-router-dom'
 
 const images = [
   {
@@ -65,6 +66,7 @@ const images = [
 
 const Product = () => {
   const [colorValue, setColorValue] = useState('')
+  const navigate = useNavigate()
 
   useEffect(() => {
     if (colorValue) console.log(colorValue)
@@ -154,7 +156,7 @@ const Product = () => {
 
               <div className="hstack gap-3 group-on-mobile mb-5">
                 <button className="btn btn-chat product-btn-font-size">Chat</button>
-                <button className="btn btn-add-bag product-btn-font-size">Add bag</button>
+                <button className="btn btn-add-bag product-btn-font-size" style={{ cursor: 'pointer' }} onClick={() => navigate('/cart')}>Add bag</button>
                 <button className="btn btn-buying product-btn-font-size">Buy</button>
               </div>
             </div>

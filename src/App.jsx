@@ -8,6 +8,9 @@ import Dashboard from './pages/dashboard'
 import Product from './pages/product'
 import Profile from './pages/profile'
 import Search from './pages/search'
+import { ToastContainer } from 'react-toastify'
+
+import 'react-toastify/dist/ReactToastify.css'
 
 import StoreProfile from './components/store.profile'
 import EditProfile from './components/edit.profile'
@@ -26,14 +29,16 @@ const App = () => {
         <Route path="profile" element={<Profile />}>
           <Route
             path="edit"
-            element={<StoreProfile />}
+            element={<EditProfile />}
           />
           <Route
             path="selling"
-            element={<EditProfile />}
+            element={<StoreProfile />}
           />
         </Route>
       </Routes>
+
+      <ToastContainer />
     </Fragment>
   )
 }

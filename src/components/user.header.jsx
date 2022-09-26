@@ -10,9 +10,11 @@ import mailIcon from '../assets/img/mail.svg'
 import '../../node_modules/datalist-css/dist/datalist-css'
 import '../assets/css/datalist.css'
 import '../assets/css/filter.css'
+import { useNavigate } from 'react-router-dom'
 
 const UserHeader = () => {
   const [isFocus, setIsFocus] = useState(true)
+  const navigate = useNavigate()
 
   const onBlurDatalist = () => {
     setTimeout(() => setIsFocus(false), 500)
@@ -88,7 +90,7 @@ const UserHeader = () => {
                                         Chicago
                                     </option>
                                 </datalist>
-                                <button type="button" className="btn btn-search">
+                                <button type="button" className="btn btn-search" onClick={() => navigate('/search')}>
                                     <img src={searchIcon} alt="Search" loading="lazy" />
                                 </button>
                             </form>

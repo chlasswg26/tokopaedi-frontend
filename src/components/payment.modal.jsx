@@ -1,11 +1,31 @@
-import React, { Fragment, useState } from 'react'
+import React, { Fragment, useEffect, useState } from 'react'
 import Modal from './modal'
 import Gopay from '../assets/img/gopay.png'
 import PosIndonesia from '../assets/img/pos-indonesia.png'
 import Mastercard from '../assets/img/mastercard.png'
 import '../assets/css/payment.modal.css'
+import { useSearchParams } from 'react-router-dom'
+import { toast } from 'react-toastify'
 
 const ModalFooter = () => {
+  const [searchParams, setSearchParams] = useSearchParams()
+  const onPay = () => setSearchParams({ msg: 'Order success!' })
+  const success = searchParams.get('msg')
+
+  useEffect(() => {
+    if (success) {
+      toast.success(success, {
+        position: 'bottom-center',
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined
+      })
+    }
+  }, [success])
+
   return (
         <Fragment>
             <div className="hstack align-items-center justify-content-between w-100 h-auto">
@@ -15,7 +35,7 @@ const ModalFooter = () => {
                   </strong>
                   <strong className="price-checkout-font summary-font-color">$ 40.0</strong>
                 </div>
-                <button type="button" className="btn rounded-pill btn-apply btn-pay">
+                <button type="button" className="btn rounded-pill btn-apply btn-pay" style={{ cursor: 'pointer' }} onClick={onPay}>
                   Buy
                 </button>
             </div>
