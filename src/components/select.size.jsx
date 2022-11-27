@@ -125,7 +125,7 @@ const Svg = (props) => (
     />
 )
 
-const Popout = () => {
+const SelectSize = () => {
   const [data, setData] = useState({
     isOpen: false,
     value: undefined
@@ -136,45 +136,42 @@ const Popout = () => {
   }
 
   const onSelectChange = (value) => {
-    console.log(value)
     toggleOpen()
     setData({ value })
   }
 
-  console.log(data.value, data)
-
   return (
     <Fragment>
-        <Dropdown
-            isOpen={data.isOpen}
-            onClose={toggleOpen}
-            target={
-                <Button
-                    iconAfter={<ChevronDown />}
-                    onClick={toggleOpen}
-                    isSelected={data.isOpen}
-                    className="btn-dropdown"
-                >
-                    {data.value ? `Size: ${data.value.label}` : 'Select size'}
-                </Button>
-            }
-        >
-            <Select
-                autoFocus
-                backspaceRemovesValue={false}
-                components={{ DropdownIndicator, IndicatorSeparator: null }}
-                controlShouldRenderValue={false}
-                hideSelectedOptions={false}
-                isClearable={false}
-                menuIsOpen
-                onChange={onSelectChange}
-                options={options}
-                placeholder="Search..."
-                styles={selectStyles}
-                tabSelectsValue={false}
-                value={data.value}
-            />
-        </Dropdown>
+      <Dropdown
+        isOpen={data.isOpen}
+        onClose={toggleOpen}
+        target={
+          <Button
+            iconAfter={<ChevronDown />}
+            onClick={toggleOpen}
+            isSelected={data.isOpen}
+            className='btn-dropdown'
+          >
+            {data.value ? `Size: ${data.value.label}` : 'Select size'}
+          </Button>
+        }
+      >
+        <Select
+          autoFocus
+          backspaceRemovesValue={false}
+          components={{ DropdownIndicator, IndicatorSeparator: null }}
+          controlShouldRenderValue={false}
+          hideSelectedOptions={false}
+          isClearable={false}
+          menuIsOpen
+          onChange={onSelectChange}
+          options={options}
+          placeholder='Search...'
+          styles={selectStyles}
+          tabSelectsValue={false}
+          value={data.value}
+        />
+      </Dropdown>
     </Fragment>
   )
 }
@@ -186,4 +183,4 @@ Dropdown.propTypes = {
   onClose: PropTypes.func
 }
 
-export default Popout
+export default SelectSize

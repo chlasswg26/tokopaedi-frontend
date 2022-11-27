@@ -8,3 +8,7 @@
 .btn-dropdown > span {
     color: white;
 }
+
+.width-selection {
+    width: auto!important
+}

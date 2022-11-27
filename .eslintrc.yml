@@ -14,4 +14,12 @@ parserOptions:
     modules: true
 plugins:
   - react
-rules: {}
+rules: 
+  react/prop-types:
+    - 'off'
+  react/react-in-jsx-scope:
+    - 'off'
+  prefer-promise-reject-errors:
+    - 'off'
+  multiline-ternary:
+    - 'off'

@@ -1,31 +1,58 @@
 import React, { Fragment, useState, useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
+import { getCategoryActionCreator } from '../redux/action/creator/category'
 import Modal from './modal'
 
 const ModalFooter = () => {
+  const navigate = useNavigate()
+
   return (
-        <Fragment>
-            <div className="hstack mx-auto gap-3">
-                <button type="button" className="btn rounded-pill btn-outline-dark btn-discard">
-                    Discard
-                </button>
-                <button type="button" className="btn rounded-pill btn-apply">
-                    Apply
-                </button>
-            </div>
-        </Fragment>
+    <Fragment>
+      <div className='hstack mx-auto gap-3'>
+        <button
+          type='button'
+          className='btn rounded-pill btn-outline-dark btn-discard'
+          data-bs-dismiss='modal'
+          aria-label='Close'
+        >
+          Discard
+        </button>
+        <button
+          type='button'
+          className='btn rounded-pill btn-apply'
+          onClick={() =>
+            navigate(
+              `/search?search=${localStorage.getItem(
+                'category_name'
+              )}&sortBy=${localStorage.getItem('order')}`
+            )
+          }
+          data-bs-dismiss='modal'
+          aria-label='Close'
+        >
+          Apply
+        </button>
+      </div>
+    </Fragment>
   )
 }
 
 const FilterHeader = () => {
   const [colorValue, setColorValue] = useState('')
-  const [sizeValue, setSizeValue] = useState('')
+  const [orderBy, setOrderBy] = useState('')
   const [categoryValue, setCategoryValue] = useState('')
+  const dispatch = useDispatch()
+  const categories = useSelector(state => state.category.get)
 
   useEffect(() => {
-    if (colorValue) console.log(colorValue)
-    if (sizeValue) console.log(sizeValue)
-    if (categoryValue) console.log(categoryValue)
-  }, [colorValue, sizeValue, categoryValue])
+    dispatch(getCategoryActionCreator())
+  }, [])
+
+  useEffect(() => {
+    if (orderBy) localStorage.setItem('order', orderBy)
+    if (categoryValue) localStorage.setItem('category', categoryValue)
+  }, [orderBy, categoryValue])
 
   return (
         <Fragment>
@@ -60,23 +87,14 @@ const FilterHeader = () => {
                 </div>
                 <hr className="solid" />
                 <div className="vstack gap-4 bottom-content">
-                  <p className="modal-filter-title">Sizes</p>
+                  <p className="modal-filter-title">Sorting</p>
 
                   <div className="hstack filter-size-gap">
-                    <button type="button" className={sizeValue === 'xs' ? 'btn btn-content is-content-active' : 'btn btn-content'} onClick={() => setSizeValue('xs')}>
-                        XS
+                    <button type="button" className={orderBy === 'ASC' ? 'btn btn-content is-content-active' : 'btn btn-content'} onClick={() => setOrderBy('ASC')}>
+                        Ascending
                     </button>
-                    <button type="button" className={sizeValue === 's' ? 'btn btn-content is-content-active' : 'btn btn-content'} onClick={() => setSizeValue('s')}>
-                        S
-                    </button>
-                    <button type="button" className={sizeValue === 'm' ? 'btn btn-content is-content-active' : 'btn btn-content'} onClick={() => setSizeValue('m')}>
-                        M
-                    </button>
-                    <button type="button" className={sizeValue === 'l' ? 'btn btn-content is-content-active' : 'btn btn-content'} onClick={() => setSizeValue('l')}>
-                        L
-                    </button>
-                    <button type="button" className={sizeValue === 'xl' ? 'btn btn-content is-content-active' : 'btn btn-content'} onClick={() => setSizeValue('xl')}>
-                        XL
+                    <button type="button" className={orderBy === 'DESC' ? 'btn btn-content is-content-active' : 'btn btn-content'} onClick={() => setOrderBy('DESC')}>
+                        Descending
                     </button>
                   </div>
                 </div>
@@ -85,31 +103,17 @@ const FilterHeader = () => {
                   <p className="modal-filter-title">Category</p>
 
                   <div className="row row-cols-3 g-3">
-                    <div className="col">
-                      <button type="button" className={categoryValue === '*' ? 'btn btn-content is-content-active' : 'btn btn-content'} onClick={() => setCategoryValue('*')}>
-                          All
-                      </button>
-                    </div>
-                    <div className="col">
-                      <button type="button" className={categoryValue === 'women' ? 'btn btn-content is-content-active' : 'btn btn-content'} onClick={() => setCategoryValue('women')}>
-                          Women
-                      </button>
-                    </div>
-                    <div className="col">
-                      <button type="button" className={categoryValue === 'men' ? 'btn btn-content is-content-active' : 'btn btn-content'} onClick={() => setCategoryValue('men')}>
-                          Men
-                      </button>
-                    </div>
-                    <div className="col">
-                      <button type="button" className={categoryValue === 'boys' ? 'btn btn-content is-content-active' : 'btn btn-content'} onClick={() => setCategoryValue('boys')}>
-                          Boys
-                      </button>
-                    </div>
-                    <div className="col">
-                      <button type="button" className={categoryValue === 'girls' ? 'btn btn-content is-content-active' : 'btn btn-content'} onClick={() => setCategoryValue('girls')}>
-                          Girls
-                      </button>
-                    </div>
+                    {categories?.response?.map((item, index) => (
+                      <div key={index} className="col">
+                        <button type="button" className={categoryValue === item?.id ? 'btn btn-content is-content-active' : 'btn btn-content'} onClick={() => {
+                          setCategoryValue(item?.id)
+
+                          localStorage.setItem('category_name', item?.name)
+                        }}>
+                            {item?.name}
+                        </button>
+                      </div>
+                    ))}
                   </div>
                 </div>
                 <hr className="solid mb-5" />

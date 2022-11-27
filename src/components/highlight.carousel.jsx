@@ -39,8 +39,6 @@ const HighlightCarousel = () => {
   return (
     <Fragment>
         <Swiper
-          onSlideChange={() => console.log('slide change')}
-          onSwiper={(swiper) => console.log(swiper)}
           pagination={pagination}
           keyboard={true}
           loop={true}

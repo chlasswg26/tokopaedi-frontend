@@ -5,7 +5,7 @@ import PosIndonesia from '../assets/img/pos-indonesia.png'
 import Mastercard from '../assets/img/mastercard.png'
 import '../assets/css/payment.modal.css'
 import { useSearchParams } from 'react-router-dom'
-import { toast } from 'react-toastify'
+import toast from 'react-hot-toast'
 
 const ModalFooter = () => {
   const [searchParams, setSearchParams] = useSearchParams()
@@ -14,15 +14,7 @@ const ModalFooter = () => {
 
   useEffect(() => {
     if (success) {
-      toast.success(success, {
-        position: 'bottom-center',
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined
-      })
+      toast.success(success)
     }
   }, [success])
 

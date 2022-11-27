@@ -11,7 +11,7 @@
     font-weight: 800;
 }
 
-.custom-btn-customer {
+.custom-btn-unactive {
     width: 0px;
     color: mediumseagreen;
     background-color: white;
@@ -20,13 +20,13 @@
     border: 1px solid var(--bs-gray-500);
 }
 
-.custom-btn-customer:hover, .custom-btn-customer:focus {
+.custom-btn-unactive:hover, .custom-btn-unactive:focus {
     color: white;
     background-color: mediumseagreen;
     border: 1px solid mediumseagreen;
 }
 
-.custom-btn-seller {
+.custom-btn-active {
     width: 0px;
     color: white;
     background-color: mediumseagreen;
@@ -34,7 +34,7 @@
     border-bottom-right-radius: 5px;
 }
 
-.custom-btn-seller:hover, .custom-btn-seller:focus {
+.custom-btn-active:hover, .custom-btn-active:focus {
     color: white;
     background-color: mediumseagreen;
     border: 1px solid mediumseagreen;

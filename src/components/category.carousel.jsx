@@ -54,8 +54,6 @@ const CategoryCarousel = () => {
   return (
     <Fragment>
         <Swiper
-          onSlideChange={() => console.log('slide change')}
-          onSwiper={(swiper) => console.log(swiper)}
           centeredSlides={true}
           keyboard={true}
           loop={true}
