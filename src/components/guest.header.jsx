@@ -35,7 +35,7 @@ const GuestHeader = (props) => {
     navigate(
       `/search?search=${
         keyword || localStorage.getItem('category_name')
-      }&sortBy=${localStorage.getItem('order')}`
+      }&sortBy=${localStorage.getItem('order') || 'DESC'}`
     )
   }
 
