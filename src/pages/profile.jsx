@@ -239,7 +239,6 @@ const Profile = () => {
                   {menuCollapse === 'order' && (
                     <div className='vstack gap-3 mb-4 list-link'>
                       <Link to='/profile/transactions'>My transaction</Link>
-                      <a href='/'>Order cancel</a>
                     </div>
                   )}
                 </div>
