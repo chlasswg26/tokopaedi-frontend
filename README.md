@@ -65,13 +65,19 @@ yarn install
 npm install
 ```
 
-<p>5. Development Mode</p>
+<p>5. Setup Environment Variables with yours (Rename .env.example to .env)</p>
+
+```
+mv .env.example .env
+```
+
+<p>6. Development Mode</p>
 
 ```
 yarn dev
 ```
 
-<p>6. Production Mode</p>
+<p>7. Production Mode</p>
 
 ```
 yarn start
