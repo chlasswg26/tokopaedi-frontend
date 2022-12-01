@@ -77,7 +77,7 @@ mv .env.example .env
 yarn dev
 ```
 
-<p>7. Building</p>
+<p>7. Building (SPA)</p>
 
 ```
 yarn build
