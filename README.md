@@ -71,16 +71,16 @@ npm install
 mv .env.example .env
 ```
 
-<p>6. Development Mode</p>
+<p>6. Development</p>
 
 ```
 yarn dev
 ```
 
-<p>7. Production Mode</p>
+<p>7. Building</p>
 
 ```
-yarn start
+yarn build
 ```
 
   
