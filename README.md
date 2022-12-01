@@ -50,7 +50,7 @@ git clone https://github.com/chlasswg26/tokopaedi-frontend.git
 <p>2. CD to Folder</p>
 
 ```
-cd tokopaedit-frontend
+cd tokopaedi-frontend
 ```
 
 <p>3. Install All Package (Yarn)</p>
