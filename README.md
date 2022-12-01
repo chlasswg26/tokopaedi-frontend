@@ -8,7 +8,7 @@
 
 <h2>🚀 Demo</h2>
 
-[https://github.com/chlasswg26/tokopaedi-frontend](https://github.com/chlasswg26/tokopaedi-frontend)
+[https://tokopaedi-frontend.vercel.app/](https://tokopaedi-frontend.vercel.app/)
 
 <h2>Project Screenshots:</h2>
 
