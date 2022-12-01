@@ -12,6 +12,7 @@
 
 <h2>Project Screenshots:</h2>
 
+<p align="center">
 <img src="https://i.imgur.com/A96CCXw.png" alt="project-screenshot" width="300" height="300/">
 
 <img src="https://i.imgur.com/4mZS6RR.png" alt="project-screenshot" width="300" height="300/">
@@ -25,6 +26,7 @@
 <img src="https://i.imgur.com/PFsr6pL.png" alt="project-screenshot" width="300" height="300/">
 
 <img src="https://i.imgur.com/fJQtUS3.png" alt="project-screenshot" width="300" height="300/">
+</p>
 
   
   
