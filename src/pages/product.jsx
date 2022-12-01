@@ -273,7 +273,7 @@ const Product = () => {
               <button
                 type='button'
                 className='btn btn-buying product-btn-font-size'
-                onClick={onBuyProduct}
+                onClick={header ? onBuyProduct : () => navigate('/auth/signin')}
               >
                 Buy
               </button>
