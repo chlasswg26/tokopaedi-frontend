@@ -4,7 +4,7 @@
 
 <p id="description">Tokopaedi adalah sebuah aplikasi berbasis website yang berbagai produk konsumsi atau barang pakai dengan harga terjangkau. User dapat membeli produk apapun dengan syarat mendaftarkan akun terlebih dahulu. Tokopaedi dikembangkan dengan stack PERN (PostgreSQL Express js React js Node js) dan design menggunakan Bootstrap CSS.</p>
 
-<p align="center"><img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&amp;logo=react&amp;logoColor=61DAFB" alt="shields"><img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge" alt="shields"><img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&amp;logo=bootstrap&amp;logoColor=white" alt="shields"><img src="https://img.shields.io/badge/Redux-593D88?style=for-the-badge&amp;logo=redux&amp;logoColor=white" alt="shields"><img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&amp;logo=postgresql&amp;logoColor=white" alt="shields"></p>
+<p align="center"><img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&amp;logo=react&amp;logoColor=61DAFB" alt="shields"><img src="https://img.shields.io/badge/Express.js-404D59?style=for-the-badge" alt="shields"><img src="https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&amp;logo=bootstrap&amp;logoColor=white" alt="shields"><img src="https://img.shields.io/badge/Redux-593D88?style=for-the-badge&amp;logo=redux&amp;logoColor=white" alt="shields"><img src="https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&amp;logo=postgresql&amp;logoColor=white" alt="shields"><img src="https://img.shields.io/badge/Redis-D9281A?style=for-the-badge&amp;logo=redis&amp;logoColor=white" alt="shields"></p>
 
 <h2>🚀 Demo</h2>
 
